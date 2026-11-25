@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Dumbbell,
   Flame,
@@ -9,7 +8,7 @@ import {
   ArrowUpRight,
   Star,
   Phone,
-  Instagram,
+  ExternalLink,
   ShieldCheck,
 } from 'lucide-react';
 
@@ -24,7 +23,7 @@ export function App() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
           <a href="#" className="flex items-center gap-3">
             <img
-              src="/logo.jpg"
+              src="/logo-flexus.jpg"
               alt="Logo Flexus Fitness"
               className="h-10 w-10 rounded-lg border border-[#FF6B00]/40 object-cover"
             />
@@ -70,7 +69,7 @@ export function App() {
         <div className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-[#FF6B00]/10 blur-3xl" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid items-center gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-6">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#FF6B00]/30 bg-[#FF6B00]/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-[#FF6B00]">
                 <Flame className="h-3.5 w-3.5" />
                 Academia em Paulínia • São José
@@ -122,12 +121,12 @@ export function App() {
               </div>
             </div>
 
-            {/* CARD DESTAQUE IDENTIDADE */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-2xl border border-[#2A2A2E] bg-[#141416] p-8 shadow-2xl">
-                <div className="mb-6 flex items-center justify-between">
+            {/* CARD DESTAQUE FACHADA DA ACADEMIA */}
+            <div className="lg:col-span-6">
+              <div className="relative overflow-hidden rounded-2xl border border-[#2A2A2E] bg-[#141416] p-5 shadow-2xl sm:p-6">
+                <div className="mb-4 flex items-center justify-between">
                   <span className="text-xs font-bold uppercase tracking-widest text-[#FF6B00]">
-                    01 / AMBIENTE FLEXUS
+                    01 / NOSSA ESTRUTURA
                   </span>
                   <div className="flex items-center gap-1 text-amber-400">
                     <Star className="h-4 w-4 fill-current" />
@@ -138,22 +137,29 @@ export function App() {
                   </div>
                 </div>
 
-                <div className="flex justify-center py-4">
+                <div className="overflow-hidden rounded-xl border border-[#2A2A2E]">
                   <img
-                    src="/logo.jpg"
-                    alt="Emblema Flexus Fitness"
-                    className="h-44 w-44 rounded-2xl border-2 border-[#FF6B00]/50 object-cover shadow-lg shadow-[#FF6B00]/10"
+                    src="/local-flexus-ia.jpg"
+                    alt="Fachada da academia Flexus Fitness em Paulínia"
+                    className="h-64 w-full object-cover sm:h-80"
                   />
                 </div>
 
-                <div className="mt-6 space-y-3 border-t border-[#2A2A2E] pt-6">
-                  <p className="text-sm italic text-neutral-300">
-                    "Ótimo lugar, professores bem atenciosos e boas instalações
-                    para treinar!"
-                  </p>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
-                    Avaliação verificada no Google • Paulínia
-                  </p>
+                <div className="mt-5 flex items-center gap-4 border-t border-[#2A2A2E] pt-5">
+                  <img
+                    src="/logo-flexus.jpg"
+                    alt="Símbolo Flexus Fitness"
+                    className="h-12 w-12 shrink-0 rounded-xl border border-[#FF6B00]/40 object-cover"
+                  />
+                  <div>
+                    <p className="text-sm italic text-neutral-300">
+                      "Ótimo lugar, professores bem atenciosos e boas
+                      instalações para treinar!"
+                    </p>
+                    <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-neutral-500">
+                      Avaliação verificada no Google • Paulínia
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -332,17 +338,24 @@ export function App() {
       {/* FOOTER */}
       <footer className="border-t border-[#2A2A2E] bg-[#080809] py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-neutral-500 sm:flex-row sm:px-6">
-          <p>
-            © {new Date().getFullYear()} Flexus Fitness • Paulínia - SP. Todos
-            os direitos reservados.
-          </p>
+          <div className="flex items-center gap-2.5">
+            <img
+              src="/logo-flexus.jpg"
+              alt="Flexus Fitness"
+              className="h-6 w-6 rounded object-cover"
+            />
+            <p>
+              © {new Date().getFullYear()} Flexus Fitness • Paulínia - SP. Todos
+              os direitos reservados.
+            </p>
+          </div>
           <a
             href="https://instagram.com/flexus_fitness/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 font-semibold text-neutral-400 transition hover:text-[#FF6B00]"
           >
-            <Instagram className="h-4 w-4" />
+            <ExternalLink className="h-4 w-4" />
             @flexus_fitness
           </a>
         </div>
